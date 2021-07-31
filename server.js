@@ -15,7 +15,7 @@ const db = knex({
 });
 
 const app = express();
-const PORT = 3001;
+const PORT2 = 3001;
 
 // Middleware
 app.use(express.json());
@@ -104,6 +104,6 @@ app.put("/image", (req, res) => {
     .catch((err) => res.status(400).json("Unable to get entries"));
 });
 
-app.listen(PORT, () => {
-  console.log(`App is running on Port: ${PORT}`);
+app.listen(process.env.PORT || PORT2, () => {
+  console.log(`App is running on Port: ${process.env.PORT}`);
 });
