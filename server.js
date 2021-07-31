@@ -7,7 +7,7 @@ import knex from "knex"; // using Knex.js to connect our server to our DB
 const db = knex({
   client: "pg",
   connection: {
-    host: process.env.DATABSE_URL,
+    connectionString: process.env.DATABSE_URL,
     ssl: true,
   },
 });
