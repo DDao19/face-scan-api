@@ -7,7 +7,7 @@ import knex from "knex"; // using Knex.js to connect our server to our DB
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
+    host: "postgresql-regular-25825",
     user: "postgres",
     password: "test",
     database: "facescandb",
